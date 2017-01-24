@@ -4,4 +4,5 @@ apt upgrade -y
 apt install build-essential cpanminus dyndns -y
 cpanm Mojolicious
 iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT  --to 8080
-mojo daemon -l http://*:8080
+git clone git@github.com:mowgli29/awsbws-server.git /tmp/awsbws-server
+cd /tmp/awsbws-server; echo morbo -l http://*:8080 myapp.pl
